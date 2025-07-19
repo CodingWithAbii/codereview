@@ -146,12 +146,12 @@ export default function LandingPage() {
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div className='w-fit'>
                         <img
-                          src="https://placehold.co/600x400.png"
+                          src="/icon.png"
                           alt="Code analysis dashboard"
                           data-ai-hint="code dashboard"
-                          className="rounded-lg shadow-xl"
+                          className='h-[500px]'
                         />
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation'
 import { supabase } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import {
@@ -19,7 +19,6 @@ import { useToast } from '@/hooks/use-toast';
 import { Code2 } from 'lucide-react';
 
 export default function LoginPage() {
-  const router = useRouter();
   const { toast } = useToast();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -47,9 +46,7 @@ export default function LoginPage() {
         title: 'Login Successful',
         description: 'Welcome back!',
       });
-      router.push('/app');
-      // Refresh the page to ensure the session is updated across the app
-      router.refresh();
+      redirect('/app');
     }
   };
 

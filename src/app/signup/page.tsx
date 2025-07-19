@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation'
 import { supabase } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import {
@@ -18,7 +18,6 @@ import { useToast } from '@/hooks/use-toast';
 import { Code2 } from 'lucide-react';
 
 export default function SignupPage() {
-  const router = useRouter();
   const { toast } = useToast();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -47,8 +46,7 @@ export default function SignupPage() {
         description:
           'Welcome! Please check your email to verify your account.',
       });
-      router.push('/app');
-      router.refresh();
+      redirect('/app');
     }
   };
 

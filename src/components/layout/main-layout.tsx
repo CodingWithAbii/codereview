@@ -14,7 +14,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Code2, LayoutDashboard, GitMerge, Settings, User } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { redirect, usePathname } from 'next/navigation';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   DropdownMenu,
@@ -37,7 +37,6 @@ const navItems = [
 
 const MainLayout: FC<{ children: ReactNode }> = ({ children }) => {
   const pathname = usePathname();
-  const router = useRouter();
   const { session } = useAuth();
   const { toast } = useToast();
   const [userName, setUserName] = useState('');
@@ -73,8 +72,7 @@ const MainLayout: FC<{ children: ReactNode }> = ({ children }) => {
         variant: 'destructive',
       });
     } else {
-      router.push('/login');
-      router.refresh();
+      redirect('/login');
     }
   };
 
