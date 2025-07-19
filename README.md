@@ -1,9 +1,5 @@
 # CodeReview - AI-Powered Code Analysis Assistant
 
-<div align="center">
-  <img src="https://placehold.co/128x128/77B5FE/F0F8FF?text=CR" alt="CodeReview Logo">
-</div>
-
 <p align="center">
   <strong>CodeReview</strong> is a web application built with Next.js that leverages the power of Generative AI to provide instant, insightful, and comprehensive code reviews. It's designed to help developers and teams improve code quality, save time, and accelerate the development cycle.
 </p>
@@ -11,9 +7,7 @@
 <p align="center">
   <a href="#-key-features">Key Features</a> •
   <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-screenshots">Screenshots</a> •
-  <a href="#-license">License</a>
+  <a href="#-getting-started">Getting Started</a>
 </p>
 
 ---
@@ -50,7 +44,7 @@ Follow these instructions to get a local copy up and running for development and
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/codereview.git
+    git clone https://github.com/CodingWithAbii/codereview.git
     cd codereview
     ```
 
